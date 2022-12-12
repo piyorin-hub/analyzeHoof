@@ -10,7 +10,9 @@ function newPoint = fixLegsDirection(ptCloud, cutAxes, cutWidth)
     [~, I] = max(area);
     rotAxes = 'z';
     if x(I) < 0
-        newPoint = rotatedPoint(ptCloud, pi, rotAxes);
+        newPoint = rotatePoint(ptCloud, pi, rotAxes);
+    else 
+        newPoint = ptCloud;
     end
 end
 
