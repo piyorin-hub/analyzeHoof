@@ -1,6 +1,6 @@
 function [fig, coeff, score] = drawPCaxis3D(ptData)
     % This function draws PC Axis on The plot After calculate by PCA
-    % @param data => PointCloud.Location (xyzPoints)
+    % @param data => PointCloud.Location
     % 
     [coeff, score] = pca(ptData);
     [h1, h2, h3] = pcaxisVector(coeff);
@@ -15,9 +15,9 @@ function [fig, coeff, score] = drawPCaxis3D(ptData)
     fig = figure('Position', [100 500 500 400]); 
 
     hold on;
-    xLab = [170 0 0];
-    yLab = [0 170 0];
-    zLab = [0 0 170];
+    xLab = [200 0 0];
+    yLab = [0 200 0];
+    zLab = [0 0 200];
     quiver3(X, Y, Z, h1, h2, h3,'red','AutoScale', "on", 'AutoScaleFactor',165, 'LineWidth',3.5);
     text(xLab,yLab,zLab, num2str((1:numel(xLab)).'), 'Color','w', 'FontSize',20);
     quiver3(X, Y, Z, -h1, -h2, -h3,'red', 'AutoScale', "on", 'AutoScaleFactor',140, 'Marker','o','ShowArrowHead','off', 'LineWidth',3.5);
