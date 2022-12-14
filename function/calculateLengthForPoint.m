@@ -5,4 +5,6 @@ function len = calculateLengthForPoint(Point2d)
         diff = norm(Point2d(i,:) - Point2d(i+1,:));
         len = len + diff; 
     end
+    len =len + norm(Point2d(1,:) - Point2d(length(Point2d),:));
+%     disp(len);
 end

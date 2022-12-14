@@ -41,7 +41,7 @@ function fixedPoint = fixHoofTipDirection(ptCloud, axes, tipWidth, kmeanNum)
    
     fixedPoint = rotatePoint(ptCloud, diffTheta, axes);
     figure("Name","fix Hoof Tip Direction");
-    hold on;
+    hold on;grid on;
     pcshow(rotTipCenter, 'r', "MarkerSize", 300);
     pcshow(Crot, 'm', "MarkerSize", 300);
     pcshow(fixedPoint, 'AxesVisibility','on');

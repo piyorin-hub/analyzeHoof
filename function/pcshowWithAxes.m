@@ -5,6 +5,7 @@ function pcshowWithAxes(ptCloud, name)
     else
         figure("Name",name);
     end
+    grid on;
     pcshow(ptCloud, AxesVisibility="on");
     xlabel('X');
     ylabel('Y');

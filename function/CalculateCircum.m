@@ -1,9 +1,9 @@
-function CircumData = CalculateCircum(sPoint, axis, cutWidthT)
+function CircumData = CalculateCircum(sPoint, axes, cutWidthT)
 % param point 点群データ(pointCloud)
 % param axis str 軸方向
 % param t カット幅
 
-    switch axis
+    switch axes
         case 'x' % x軸方向にスライスしたい
             limit = sPoint.XLimits;
             axisIdx = 1;

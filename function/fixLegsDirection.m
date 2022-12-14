@@ -15,4 +15,3 @@ function newPoint = fixLegsDirection(ptCloud, cutAxes, cutWidth)
         newPoint = ptCloud;
     end
 end
-
