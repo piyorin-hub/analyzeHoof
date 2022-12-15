@@ -1,5 +1,6 @@
 function pcshowWithAxes(ptCloud, name)
-    
+% @param1 = pointCloud
+% @param2 = figure name
     if nargin < 2
         figure;
     else
