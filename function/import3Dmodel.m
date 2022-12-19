@@ -4,11 +4,13 @@ function ptCloud = import3Dmodel(filename, showPt)
     end
     if contains(filename, '.stl')
         mesh = stlread(filename);
-        scale = 1;
+        scale = 1000;
         pt = (mesh.Points).*scale;
         ptCloud = pointCloud(pt);
     elseif contains(filename, '.ply')
-        ptCloud = pcread(filename);
+        pt = pcread(filename);
+        ptData = pt.Location * 1000;
+        ptCloud = pointCloud(ptData);
     else
         disp('Not Found');
     end
